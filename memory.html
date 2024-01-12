@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(210, 133, 230);
+        }
+        #txt{
+            width: 380px;
+            height: 50px;
+            margin-top: 180px;
+            margin-left: 480px;
+            box-shadow: 2px 2px;
+            border-radius: 7px 7px;
+            border: 1px solid black;
+            position: absolute;
+            font-size:22px;
+            text-align: center;
+        }
+        #btn{
+            width: 50px;
+            height: 50px;
+            margin-top: 180px;
+            margin-left: 880px;
+            position: absolute;
+            font-size:22px;
+            background-color: blue;
+            color: white;
+        }
+        .box{
+            background-color: rgb(235, 219, 219);
+            float: left;
+            width: 280px;
+            height: 230px;
+            margin-top: 300px;
+            margin-left: 140px;
+            border: 2px solid rgb(3, 8, 8);
+            border-radius: 30px;
+            box-shadow:4px 4px ;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="text"id="txt" placeholder="Write Here">
+        <input type="button" value="Go" id="btn">
+    </form>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script>
+        function jp(){
+            let b=document.getElementById("txt")
+            let c=document.getElementsByClassName("box")
+            c.h1=b.innerHTML
+        }
+        const go=document.getElementById("btn")
+        go.addEventListener("click",jp)
+        
+    </script>
+</body>
+</html>

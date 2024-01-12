@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hh{
+            background-color: aqua;
+            background-repeat:repeat;
+            backface-visibility: visible;
+            background-position: 20%;
+            font-variant: small-caps;
+            font-size: 45px;
+            /* font-family: 'Times New Roman', Times, serif; */
+            /* direction: rtl; */
+
+        }
+    </style>
+</head>
+<body>
+    <div id="p">
+        <center>
+            <h1 id="hh">Welcome</h1>
+            <pre><b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                ratione voluptates rerum voluptatibus repellat repellendus dolorum aspernatur nemo? Omnis adipisci maiores deleniti consequatur
+                eius at enim assumenda placeat error perspiciatis!</b></pre>
+            Enter
+            <input type="text" id="txt" placeholder="Enter plz">
+            <input type="button" id="txt" value="plz" onclick="printA(txt.value)">
+        </center>
+    </div>
+    <div style="border: 1px; background-color: aqua;direction: rtl; word-spacing: 5px;">
+        <p>dfsd sdgd ghgj kjhl dgdhgh kkghkhjsdfd dfgf</p>
+    </div>
+    <p style="text-shadow:6px 6px 8px blue;">If your browser supports the CSS text-shadow property, 
+              this text will have a blue shadow.</p>
+</body>
+<script>
+    var c
+    function printA(data)
+    {
+        c=parseInt(data);
+        alert("Res="+c);
+    }
+</script>
+</html>

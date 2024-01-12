@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cl{
+            animation: st 5s infinite;
+        }
+        @-webkit-keyframes st{
+            0%{background-color: blue;}
+            25%{background-color: rgb(106, 195, 247);}
+            50%{background-color: brown;}
+            75%{background-color: rgb(205, 60, 241);}
+        }
+    </style>
+</head>
+<body class="cl">
+    <input type="text" id="pp">
+    <input type="button" value="click" id="b">
+    <input type="text" id="qq">
+    <input type="text" id="rr">
+    <script>
+        let b=document.getElementById("b");
+        // Anonymous function call by addEventListener
+        b.addEventListener('click',function(){
+            document.getElementById("qq").value=document.getElementById("pp").value;
+        })
+        // Normal function call by addEventListener
+        b.addEventListener('click',show);
+        function show()
+        {
+            document.getElementById("rr").value="It is a function";
+        }
+        // let op=document.getElementById('pp');
+        // op.addEventListener('keyup',function(){
+        //     document.getElementById("qq").value="Hello";
+        // })
+    </script>
+</body>
+</html>

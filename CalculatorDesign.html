@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(to right , rgb(43, 125, 247), rgb(248, 42, 169));
+        }
+        #box{
+            width:320px;
+            height:420px;
+            border: 3px solid greenyellow;
+            margin: 120px auto;
+            border-radius: 15px;
+            box-sizing: border-box;
+            align-items: center;
+            box-shadow: 10px 10px 15px white;
+        }
+        #out{
+            margin-top: 6px;
+            margin-left: 20px;
+            width: 270px;
+            height:30px;
+            text-align: right;
+            border-radius: 8px;
+            background: transparent;
+            background-color: rgb(218, 212, 205);
+            font-size: 25px;
+        }
+        h3{
+            margin-top: 18px;
+            margin-left: 110px;
+            margin-bottom: 0px;
+            font-size: 23px;
+            text-decoration: underline;
+        }
+        #btn{
+            width: 318px;
+            height: 310px;
+            padding:10px;
+            margin: 0px;
+        }
+        .key{
+            width:40px;
+            height: 40px;
+            box-sizing: border-box;
+            font-size:15px;
+            margin-left: 6px;
+            font-weight: bold;
+            /* background: transparent; */
+            background-color: rgb(155, 190, 190);
+            border-radius:6px;
+            box-shadow: -1px -2px;
+        }
+        .keyx{
+            width:40px;
+            height: 90px;
+            box-sizing: border-box;
+            margin-left: 6px;
+            font-weight: bold;
+            /* background: transparent; */
+            background-color: rgb(155, 190, 190);
+            border-radius:6px;
+            box-shadow: -1px -2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h3>Calculator</h3>
+        <input type="text" id="out" readonly><hr color="red">
+        <table id="btn">
+            <tbody>
+                <tr>
+                    <td><input type="button" value="ON" class="key" ></td>
+                    <td><input type="button" value="MC" class="key"></td>
+                    <td><input type="button" value="MR" class="key"></td>
+                    <td><input type="button" value="M-" class="key"></td>
+                    <td><input type="button" value="M+" class="key"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="OFF" class="key"></td>
+                    <td><input type="button" value="%" class="key"></td>
+                    <td><input type="button" value="Rt" class="key"></td>
+                    <td><input type="button" value="+/-" class="key"></td>
+                    <td><input type="button" value="AC" class="key" onclick="clearResult()"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" class="key" onclick="appendToResult('7')"></td>
+                    <td><input type="button" value="8" class="key" onclick="appendToResult('8')"></td>
+                    <td><input type="button" value="9" class="key" onclick="appendToResult('9')"></td>
+                    <td><input type="button" value="x" class="key" onclick="appendToResult('*')"></td>
+                    <td><input type="button" value="CE" class="key"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" class="key" onclick="appendToResult('4')"></td>
+                    <td><input type="button" value="5" class="key" onclick="appendToResult('5')"></td>
+                    <td><input type="button" value="6" class="key" onclick="appendToResult('6')"></td>
+                    <td><input type="button" value="-" class="key" onclick="appendToResult('-')"></td>
+                    <td><input type="button" value="/" class="key" onclick="appendToResult('/')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" class="key" onclick="appendToResult('1')"></td>
+                    <td><input type="button" value="2" class="key" onclick="appendToResult('2')"></td>
+                    <td><input type="button" value="3" class="key" onclick="appendToResult('3')"></td>
+                    <td rowspan="2"><input type="button" value="+" class="keyx" onclick="appendToResult('+')"></td>
+                    <td rowspan="2"><input type="button" value="=" class="keyx" onclick="calculateResult()"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" class="key" onclick="appendToResult('0')"></td>
+                    <td><input type="button" value="00" class="key" onclick="appendToResult('00')"></td>
+                    <td><input type="button" value="." class="key" onclick="appendToResult('.')"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let userInput="";
+        let currentValue = 0;
+        function appendToResult(value)
+        {
+            userInput=userInput+value;
+            // console.log(currentValue);
+            document.getElementById("out").value=userInput;
+            currentValue=userInput;
+        }
+        function clearResult() {
+            userInput = '';
+            currentValue = 0;
+            document.getElementById('out').value = '';
+        }
+        function calculateResult()
+        {
+            document.getElementById("out").value=eval(userInput);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #td{
+            background-color: aqua;
+            padding:3px;
+            margin:3px;
+            width: 460px;
+            height: 180px;
+            border-radius: 20px;
+            box-shadow:6px 8px rgba(248, 7, 67, 0.897);
+        }
+        #row{
+            padding-left: 20px;
+            border-radius: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #fst{
+            padding-left: 25px;
+            border-radius: 20px;
+            font-size: 25px;
+        }
+        #snd{
+            padding-left: 25px;
+            border-radius: 20px;
+            font-size: 25px;
+        }
+        #First{
+            border: none;
+            background-color: aqua;
+            font-size: 20px;
+            text-align: center;
+        }
+        #Second{
+            border: none;
+            background-color: aqua;
+            font-size: 20px;
+            text-align: center;
+        }
+        #btn{
+            border: none;
+            background-color: rgba(241, 188, 10, 0.918);
+            border-radius: 10px;
+            margin: 10px;
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body style="background-color: rgba(247, 186, 20, 0.945);">
+    <center>
+        <h1>Calculator</h1>
+        <form>
+            <table border="1" id="td">
+                <tr>
+                    <td id="row">First Number</td>
+                    <td id="fst"><input type="text"id="First" placeholder="Enter first number"></td>
+                </tr>
+                <tr>
+                    <td id="row">Second Number</td>
+                    <td id="snd"><input type="text" id="Second" placeholder="Enter second number"></td>
+                </tr>
+                <tr>
+                    <td id="snd" colspan="2"><input type="button" value="Add" id="btn" onclick="Add(First.value,Second.value)"><input type="button" value="Sub" id="btn" onclick="Sub(First.value,Second.value)"><input type="button" value="Multiply" id="btn" onclick="Mul(First.value,Second.value)"><input type="button"  id="btn" value="Div" onclick="Div(First.value,Second.value)"><input type="reset" value="Reset" id="btn"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    <script>
+        var a,b,c;
+        function Add(firstNum,SecondNum) {
+            a=parseInt(firstNum);
+            b=parseInt(SecondNum);
+            c=a+b;
+            alert("Result="+c);
+        }
+        function Mul(firstNum,SecondNum) {
+            a=parseInt(firstNum);
+            b=parseInt(SecondNum);
+            c=a*b;
+            alert("Result="+c);
+        }
+        function Sub(firstNum,SecondNum) {
+            a=parseInt(firstNum);
+            b=parseInt(SecondNum);
+            c=a-b;
+            alert("Result="+c);
+        }
+        function Div(firstNum,SecondNum) {
+            a=parseInt(firstNum);
+            b=parseInt(SecondNum);
+            c=a/b;
+            alert("Result="+c);
+        }
+    </script>
+</body>
+</html>

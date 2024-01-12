@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #on{
+            width: 260px;
+            height: 260px;
+            background-color: yellow;
+        }
+        #off{
+            width: 260px;
+            height:260px;
+            background-color: rgb(168, 170, 167);
+        }
+    </style>
+</head>
+<body>
+    <img src="bulb.png" id="off" >
+    <button onclick="on()">Bulb On</button>
+    <button onclick="off()">Bulb Off</button>
+    <script>
+        function on(){
+            document.getElementById("off").setAttribute("id","on");
+        }
+        function off(){
+            document.getElementById("on").setAttribute("id","off");
+        }
+    </script>
+</body>
+</html>

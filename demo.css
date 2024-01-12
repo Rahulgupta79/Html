@@ -1,0 +1,27 @@
+/* #h{
+    color: yellow;
+}
+.d{
+    background-color: blue;
+} */
+body{
+    background-color: rgb(9, 248, 248);
+    /* background-image: url(GM/images/bg11.png); */
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    width: 400px;
+    height: 300px;
+    margin: 80px auto;
+    /* padding: 50px; */
+    /* margin-top: 50px; */
+    background-color: rgb(245, 15, 233);
+    box-shadow: 10px 10px 15px rgb(110, 110, 110) ;
+    border: 2px solid black;
+    text-align: center;
+    background: transparent;
+    /* overflow: scroll; */
+    display:flex;
+}

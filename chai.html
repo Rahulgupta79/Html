@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #header{
+            width: 100%;
+            height: 60px;
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-around;
+            background:linear-gradient(#eb7bd8da,#24fdf2);
+        }
+        .navText{
+            font-size: 25px;
+            width: 90px;
+            justify-content: flex-start;
+        }
+        #search{
+            width: 250px;
+            height: 36px;
+            border-radius: 40px 40px;
+            background-color: #f1f5f4;
+        }
+        #Addres{
+            width: 100%;
+            height: 160px;
+            display: flex;
+            background:radial-gradient(#24fdf2,#eb7bd8da);
+            /* justify-content: center; */
+            padding-top:30px ;
+            justify-content: space-around;
+        }
+        .footrLink{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav id="header">
+        <div class="navText"><a href="#home">Home</a></div>
+        <div class="navText"></div>
+        <div class="navText"><input type="search" id="search"></div>
+        <div class="navText">Search</div>
+        <div class="navText">About</div>
+    </nav>
+    
+    <footer>
+        <address id="Addres">
+            <div class="address">
+                <ul>
+                    <li><a href="#terms" class="footrLink">Terms</a></li>
+                    <li><a href="#privacy" class="footrLink">Privacy</a></li>
+                    <li><a href="#sitmap" class="footrLink">SiteMap</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <ul>
+                    <li><a href="#Insta" target="_blank" class="footrLink">Instagram</a></li>
+                    <li><a href="#Fb" target="_blank" class="footrLink">Facebook</a></li>
+                    <li><a href="#linkedIn" target="_blank" class="footrLink">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="address">
+                <ul>
+                    <li><a href="#Youtube" target="_blank" class="footrLink">YouTube</a></li>
+                    <li><a href="tel:+917979759998" class="footrLink">Call Us</a></li>
+                    <li><a href="mailto:rg768628@gmail.com" class="footrLink">Email Us</a></li>
+                </ul>
+            </div>
+        </address>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .topInterface{
+            margin:0;
+            padding:0;
+            background-color: rgb(81, 250, 29);
+            border-radius: 0% 0% 200vh 200vh;
+            #mini00{
+                margin: 0%;
+                padding: 0%;
+                color: blue;
+                text-align: center;
+
+            }
+            #mini01{
+                margin: 0%;
+                padding: 0%;
+                color: rgba(103, 5, 216, 0.993);
+                text-align: center;
+            }
+        }
+        #bdy{
+            background-image: url("bg11.png");
+            background-attachment: fixed;
+            /* border-style: groove; */
+            border-top-style: dashed;
+            /* color: rgb(255, 251, 8); */
+            border-width: 5px;
+            border-color: yellow;
+        }
+        .navbar{
+            border-width: 4px 4px 3px 3px;
+            background-color: aqua;
+            border-color: red;
+            background-attachment: fixed;
+            border-style: groove;
+            /* background: transparent; */
+            margin: 10px;
+            /* border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px; */
+            border-radius: 10px 10px 10px 10px;
+            #Nav{
+                width: 100%;
+                border: 5px;
+                text-align: center;
+                #navHome{
+                    width: 20%;
+                }
+            }
+        }
+        #box{
+            width: 25%;
+            height:35%;
+            margin: 4%;
+            padding:25px;
+            border: 5px;
+            text-align: center;
+            font-size: 22px;
+            font-weight:bold;
+            border-style:groove;
+            border-color: rgb(5, 215, 243);
+            background-color: rgb(148, 5, 243);
+            border-radius:10px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body id="bdy">
+    <div class="topInterface">
+        <h1 id="mini00">Rahul Gupta</h1>
+        <h4 id="mini01">Welcome to Rahul's World</h4>
+    </div>
+    <div class="navbar">
+        <table id="Nav">
+            <tr id="navHome">
+                <td>Home</td>
+                <td>Accesseries</td>
+                <td>Electrical</td>
+                <td>Mechanical</td>
+                <td>Physical</td>
+            </tr>
+        </table>
+    </div>
+    <center>
+        <div id="box">
+            <form>
+                <h3><u>Login Page</u></h3>
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile No.</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>User Id</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password"></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Submit" >
+                <input type="reset" value="reset">
+            </form>
+        </div>
+    </center>
+</body>
+</html>

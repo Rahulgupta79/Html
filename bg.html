@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bdy" >
+    <h1 class="ds">Mango</h1>
+    <button id="p" >Change Background</button>
+    <script>
+        var pp=document.getElementById("p");
+        function change()
+        {
+            d=document.getElementById("bdy");
+            d.style.backgroundColor="red";
+            document.getElementsByClassName("ds").style.color="yellow";
+        }
+        pp.addEventListener("click",change);
+    </script>
+</body>
+</html>

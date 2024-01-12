@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Arrow Function
+        var a= ()=>{
+            document.write("Arrow function"+"<br>");
+        }
+        a();
+        // Function argument missing
+        function add(a,b,c)
+        {
+            document.write("argument missing function  "+a+" "+b+" "+c+"<br>");
+        }
+        add(10,20);
+        // Arguments Object function
+        function b(n,m)
+        {
+            document.write("Number of arguments  "+arguments.length);
+        }
+        b("Rahul","World");
+        // Anonymous Function
+        var c=function(){
+            document.write("<br>"+"Anonymous function is a function where we do not need  to give a function name");
+        }
+        c();
+        // Rest parameter function
+        function d(...args)
+        {
+            document.write(args);
+        }
+        d("<br>Rest parameter in this function arguments are stored as an array items "+10,20,30);
+
+    </script>
+</body>
+</html>
