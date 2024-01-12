@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(0, 174, 255, 0.753);
+            padding-left:350px;
+            margin: 0;
+        }
+        .container{
+            background-color:rgba(55, 0, 255, 0.836);
+            width: 320px;
+            height: 180px;
+            padding-left:13px;
+            margin-top:120px;
+            margin-left:90px;
+            box-shadow:4px 3px red;
+            border-radius: 20px;
+        }
+        #inp{
+            color:rgb(4, 0, 255);
+            background-attachment: fixed;
+            background-color: yellow;
+            border: none;
+            border-radius: 10px;
+            width: 180px;
+            height: 30px;
+            margin-left: 50px;
+            font-size: 18px;
+            text-align: center;
+            padding-left:20px ;
+        }
+        h1{
+            font-size: 28px;
+            margin-left:20px;
+            padding-top:8px;
+        }
+        #enter{
+            padding: 10px;
+            margin-left:120px;
+            margin-top:20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prime Number Check</h1>
+        <input type="text" id="inp" placeholder="Enter here">
+        <input type="submit" id="enter" value="Check" onclick="CheckPrime()">
+    </div>
+    <script>
+        function CheckPrime()
+        {
+            var num=Number(document.getElementById("inp").value);
+            var i=2,p=0;
+            for(i=2;i<num;i++)
+            {
+                if(num%i==0)
+                {
+                    p++;
+                }
+            }
+            if(p==0){
+                alert(num+" Is prime");
+            }
+            else
+            {
+                alert(num+" Is not prime");
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(0, 174, 255, 0.753);
+            padding-left:350px;
+            margin: 0;
+        }
+        .container{
+            background-color:rgba(55, 0, 255, 0.836);
+            width: 320px;
+            height: 180px;
+            padding-left:13px;
+            margin-top:120px;
+            margin-left:90px;
+            box-shadow:4px 3px red;
+            border-radius: 20px;
+        }
+        .input{
+            color:rgb(4, 0, 255);
+            background-attachment: fixed;
+            background-color: yellow;
+            border: none;
+            border-radius: 10px;
+            width: 180px;
+            height: 30px;
+            margin-left: 50px;
+            font-size: 18px;
+            text-align: center;
+            padding-left:20px ;
+        }
+        h1{
+            font-size: 28px;
+            margin-left:20px;
+            padding-top:8px;
+        }
+        #enter{
+            padding: 10px;
+            margin-left:120px;
+            margin-top:20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prime Number Check</h1>
+        <input type="text" class="input" placeholder="Enter here" name="input" id="numberInput">
+        <input type="submit" id="enter" value="Check" onclick="Prime()">
+    </div>
+    <script>
+        function Prime()
+        {
+            var num=Number(document.getElementsBy("numberInput").value);
+            var i=2,p=0;
+            for(i=2;i<num;i++)
+            {
+                if(num%i==0)
+                {
+                    p++;
+                }
+            }
+            if(p==0){
+                alert(num+ " Is prime");
+            }
+            else
+            {
+                alert(num+ " Is not prime");
+            }
+        }
+    </script>
+</body>
+</html> -->

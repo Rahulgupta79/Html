@@ -1,0 +1,39 @@
+body{
+    background-image: url(bg11.png);
+    width: 100%;
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    text-align: center;
+}
+.loginPanel{
+    width:450px;
+    text-align: center;
+    height:450px;
+    background-color:rgba(10, 252, 212, 0.137);
+    border-radius: 15px 15px 15px 15px;
+    box-sizing:border-box;
+    margin-left: 450px;
+    margin-top: 90px;
+    padding: 20px;
+    font-size: 20px;
+    box-shadow: 0 15px 25px rgba(0,0,.50,2);
+}
+#userName{
+    width: 270px;
+	padding: 10px;
+	font-size:20;
+	color: #f8f7f8d8;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color:rgba(116, 69, 126, 0.747);
+	/* border:none; */
+	/* outline:none; */
+	background: transparent;
+
+}
+::placeholder{
+    color: white;
+}

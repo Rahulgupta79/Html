@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        h1{
+            text-align: center;
+            color: yellow;
+        }
+        .container{
+            text-align: center;
+            background-color:rgba(209, 245, 9, 0.774);
+            width:600px;
+            height:200px;
+            padding:30px 30px;
+            margin: 20px 260px;
+            box-shadow: 5px 4px purple;
+        }
+        body{
+            background-image: url(gp.gif);
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+            padding:50px 100px;
+        }
+        .input{
+            padding: 5px 10px;
+            margin: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            width: 160px;
+            height: 80px;
+            display: inline-block;
+        }
+        label{
+            font-size: 22px;
+        }
+        #cel{
+            padding:8px;
+            width: 180px;
+            text-align: center;
+        }
+        #fah{
+            padding:8px;
+            width: 180px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <div class="container">
+        <div class="input">
+            <label>Celcius</label>
+            <input type="number" value="0" id="cel">
+        </div>
+        <div class="input">
+            <label>Farhenheight</label>
+            <input type="number" value="32" id="fah">
+        </div>
+    </div>
+    <script>
+        let cel=document.getElementById("cel");
+        let fah=document.getElementById("fah");
+        cel.addEventListener('input',function(){
+            let c=this.value;
+            let f=(c*9/5)+32;
+            if(!Number.isInteger(f)){
+                f=f.toFixed(4);
+            }
+            fah.value=f;
+        });
+        fah.addEventListener('input',function(){
+            let f=this.value;
+            let c=(f-32)*5/9;
+            if(!Number.isInteger(c)){
+                c=c.toFixed(4);
+            }
+            cel.value=c;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgba(9, 177, 243, 0.829); ;
+        }
+        #container{
+            width: 320px;
+            height: 220px;
+            margin-left: 550px;
+            margin-top: 120px;
+            background-color: rgba(127, 24, 245, 0.829);
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px rgba(243, 7, 243, 0.911);
+        }
+        #inpu{
+            margin-left: 60px;
+            margin-top: 30px;
+            border-radius: 20px;
+            width: 180px;
+            height: 30px;
+            text-align: center;
+            background-color: #ccc;
+        }
+        #output{
+            margin-left: 60px;
+            margin-top: 30px;
+            border-radius: 20px;
+            width: 180px;
+            height: 30px;
+            text-align: center;
+            background-color: #ccc;
+        }
+        #btn{
+            margin-left: 120px;
+            margin-top: 30px;
+            border-radius: 20px;
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="inpu" placeholder="Enter a number">
+        <input type="text" id="output" placeholder="Output" readonly>
+        <input type="button" value="Click here" id="btn">
+    </div>
+    <script>
+        let btn=document.getElementById("btn");
+        btn.addEventListener('click',even);
+        function even()
+        {
+            let inp=Number(document.getElementById("inpu").value);
+            if(inp % 2 ==0)
+            {
+                // console.log(inp);
+                document.getElementById("output").value="Even";
+            }
+            else
+            {
+                document.getElementById("output").value="Not Even";
+            } 
+        }
+    </script>
+</body>
+</html>
